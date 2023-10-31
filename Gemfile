@@ -22,5 +22,6 @@ group :development, :test do
 end
 
 group :development do
+  gem 'shoulda-matchers', '5.3.0'
   gem 'web-console'
 end
