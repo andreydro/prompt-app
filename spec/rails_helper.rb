@@ -1,4 +1,5 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+require 'support/factory_bot'
 require 'spec_helper'
 require 'shoulda/matchers'
 ENV['RAILS_ENV'] ||= 'test'
