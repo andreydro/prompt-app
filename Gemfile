@@ -3,8 +3,14 @@ source 'https://rubygems.org'
 ruby '3.2.2'
 
 gem 'bootsnap', require: false
+gem 'elasticsearch'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-transport'
+
 gem 'importmap-rails'
 gem 'jbuilder'
+gem 'panko_serializer'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.1'
