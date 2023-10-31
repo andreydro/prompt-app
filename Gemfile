@@ -15,6 +15,9 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
+  gem 'factory_bot_rails', '6.2.0'
+  gem 'pry', '0.14.2'
+  gem 'pry-rails', '0.3.9'
   gem 'rspec-rails'
 end
 
