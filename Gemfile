@@ -5,8 +5,8 @@ ruby '3.2.2'
 gem 'bonsai-elasticsearch-rails', '~> 7'
 gem 'bootsnap', require: false
 gem 'elasticsearch'
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
+gem 'elasticsearch-model', github: 'elastic/elasticsearch-rails', branch: 'main'
+gem 'elasticsearch-rails', github: 'elastic/elasticsearch-rails', branch: 'main'
 gem 'elasticsearch-transport'
 
 gem 'importmap-rails'
