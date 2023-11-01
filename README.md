@@ -1,24 +1,36 @@
-# README
+# Requirements:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby: 3.2.2
+Rails: 7.1.1
+Redis
+Sidekiq
+PostgreSQL
+Elasticsearch 7.x
 
-Things you may want to cover:
+# Initial setup
 
-* Ruby version
+- bundle install
+- rails db:create
+- rails db:migrate
+- redis-server
+- bundle exec sidekiq
 
-* System dependencies
+# Load phrases to database
 
-* Configuration
+- rails db:seed
 
-* Database creation
+# Manage elasticsearch
 
-* Database initialization
+Make sure that elastic search is running on port 9200
 
-* How to run the test suite
+- Create index with rake es:create_index
+- Update index with rake es:update_index
 
-* Services (job queues, cache servers, search engines, etc.)
+# Run tests
 
-* Deployment instructions
+- bundle exec rspec spec
 
-* ...
+# Start server
+
+- rails s
+
