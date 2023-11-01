@@ -21,8 +21,7 @@ class PhrasesFetcher
 
   def handle_rows(rows)
     rows.each do |row|
-      # PhraseBatchesCreationJob.perform_later(row)
-      PhrasesCreator.new(row).call
+      PhraseBatchesCreationJob.perform_later(row)
     end
   end
 
