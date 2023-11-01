@@ -77,6 +77,9 @@ GEM
     base64 (0.1.1)
     bigdecimal (3.1.4)
     bindex (0.8.1)
+    bonsai-elasticsearch-rails (7.0.1)
+      elasticsearch-model (< 8)
+      elasticsearch-rails (< 8)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -281,6 +284,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bonsai-elasticsearch-rails (~> 7)
   bootsnap
   debug
   elasticsearch

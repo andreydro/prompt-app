@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
+gem 'bonsai-elasticsearch-rails', '~> 7'
 gem 'bootsnap', require: false
 gem 'elasticsearch'
 gem 'elasticsearch-model'
