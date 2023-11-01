@@ -21,17 +21,7 @@ class PhrasesFetcher
 
   def handle_rows(rows)
     rows.each do |row|
-      handle_row_and_create_phrases(row)
-    end
-  end
-
-  def handle_row_and_create_phrases(row)
-    phrases = row['row']['Prompt'].split(',')
-
-    phrases.each do |phrase|
-      next if phrase.blank?
-
-      Phrase.create!(value: phrase.strip)
+      PhraseBatchesCreationJob.perform_later(row)
     end
   end
 
