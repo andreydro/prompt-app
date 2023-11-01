@@ -17,8 +17,8 @@ class DatasetsClient
     uri.query = URI.encode_www_form(params)
     response = Net::HTTP.get_response(uri)
     JSON.parse(response.body)
-  rescue error
-    Rails.logger.error(error)
+  rescue StandardError => e
+    Rails.logger.error(e)
   end
 
   private
