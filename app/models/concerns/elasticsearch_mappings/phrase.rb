@@ -13,6 +13,13 @@ module ElasticsearchMappings
       )
     end
 
+    settings index: { max_result_window: 25_000 } do
+      mappings dynamic: 'false' do
+        indexes(:id, type: :integer)
+        indexes(:value, type: :text)
+      end
+    end
+
     def as_indexed_json(_options = {})
       PhraseSerializer.new.serialize(self).compact
     end
